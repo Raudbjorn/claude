@@ -1,0 +1,38 @@
+{
+  "name": "massif-skills",
+  "owner": {
+    "name": "Sveinbjorn Geirsson",
+    "email": "sveinbjorn@sveinbjorn.dev"
+  },
+  "metadata": {
+    "description": "Skills for my development stack",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "supabase",
+      "description": "Comprehensive Supabase development expert covering Edge Functions, database schema management, migrations, PostgreSQL functions, and RLS policies. Use for any Supabase development including TypeScript/Deno Edge Functions, declarative schema management, SQL formatting, migration creation, database function authoring with SECURITY INVOKER, and RLS policy implementation with auth.uid() and auth.jwt().",
+      "source": "./supabase"
+    },
+    {
+      "name": "supabase-storage",
+      "description": "Expert guide for Supabase Storage including bucket management, file operations, URL generation, and RLS policies. Use when working with file uploads/downloads, creating public or private buckets, generating signed URLs, implementing storage RLS policies, handling resumable uploads, image transformations, or any Supabase Storage-related tasks.",
+      "source": "./supabase-storage"
+    },
+    {
+      "name": "supabase-realtime",
+      "description": "Comprehensive guide for implementing Supabase Realtime features with best practices, scalable patterns, and migration strategies. Use when building realtime features in Supabase applications including messaging, notifications, presence, live updates, collaborative features, or migrating from postgres_changes to broadcast.",
+      "source": "./supabase-realtime"
+    },
+    {
+      "name": "svelte-expert",
+      "description": "Expert Svelte/SvelteKit development assistant for building components, utilities, and applications. Use when creating Svelte components, SvelteKit applications, implementing reactive patterns, handling state management, working with stores, transitions, animations, or any Svelte/SvelteKit development task.",
+      "source": "./svelte-expert"
+    },
+    {
+      "name": "skill-creator",
+      "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends Claude's capabilities with specialized knowledge, workflows, or tool integrations.",
+      "source": "./skill-creator"
+    }
+  ]
+}

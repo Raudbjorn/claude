@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A curated collection of Claude Code skills for Supabase and Svelte development">
+    <meta name="keywords" content="Claude Code, Skills, Supabase, Svelte, SvelteKit, Development Tools">
+    <meta name="author" content="Sveinbjorn Geirsson">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://massifnet.work/">
+    <meta property="og:title" content="Massif Skills Marketplace">
+    <meta property="og:description" content="Curated Claude Code skills for modern web development">
+
+    <title>Massif Skills Marketplace - Claude Code Skills</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-tertiary: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+            --success: #4ade80;
+            --border: #475569;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent), var(--success));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .install-section {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+
+        .install-code {
+            background: var(--bg-primary);
+            padding: 1rem;
+            border-radius: 8px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            border: 1px solid var(--border);
+            color: var(--success);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .skill-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 2rem;
+            transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(56, 189, 248, 0.2);
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .skill-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: var(--bg-tertiary);
+            color: var(--accent);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        .skill-link {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--bg-primary);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .skill-link:hover {
+            background: var(--accent-hover);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 2px solid var(--border);
+            color: var(--text-secondary);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-hover);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Massif Skills Marketplace</h1>
+            <p class="subtitle">Curated Claude Code skills for modern web development</p>
+        </header>
+
+        <section class="install-section">
+            <h2 style="margin-bottom: 1rem; color: var(--text-primary);">🚀 Quick Install</h2>
+            <div class="install-code">
+                claude skill install https://massifnet.work/marketplace.json
+            </div>
+        </section>
+
+        <section>
+            <h2 style="margin-bottom: 2rem; color: var(--text-primary); font-size: 2rem;">📦 Available Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3 class="skill-title">Supabase</h3>
+                    <p class="skill-description">
+                        Comprehensive Supabase development expert covering Edge Functions, database schema management,
+                        migrations, PostgreSQL functions, and RLS policies.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tag">Edge Functions</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">RLS</span>
+                        <span class="tag">Migrations</span>
+                    </div>
+                    <a href="./supabase/skill.md" class="skill-link">View Skill →</a>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">📦</div>
+                    <h3 class="skill-title">Supabase Storage</h3>
+                    <p class="skill-description">
+                        Expert guide for Supabase Storage including bucket management, file operations,
+                        URL generation, and RLS policies.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tag">File Upload</span>
+                        <span class="tag">Buckets</span>
+                        <span class="tag">Signed URLs</span>
+                        <span class="tag">Transformations</span>
+                    </div>
+                    <a href="./supabase-storage/skill.md" class="skill-link">View Skill →</a>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">📡</div>
+                    <h3 class="skill-title">Supabase Realtime</h3>
+                    <p class="skill-description">
+                        Comprehensive guide for implementing Supabase Realtime features with best practices,
+                        scalable patterns, and migration strategies.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tag">Broadcast</span>
+                        <span class="tag">Presence</span>
+                        <span class="tag">Live Updates</span>
+                        <span class="tag">WebSockets</span>
+                    </div>
+                    <a href="./supabase-realtime/skill.md" class="skill-link">View Skill →</a>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🎨</div>
+                    <h3 class="skill-title">Svelte Expert</h3>
+                    <p class="skill-description">
+                        Expert Svelte/SvelteKit development assistant for building components, utilities,
+                        and applications with modern patterns.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tag">Svelte 5</span>
+                        <span class="tag">Runes</span>
+                        <span class="tag">SvelteKit</span>
+                        <span class="tag">Components</span>
+                    </div>
+                    <a href="./svelte-expert/skill.md" class="skill-link">View Skill →</a>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🛠️</div>
+                    <h3 class="skill-title">Skill Creator</h3>
+                    <p class="skill-description">
+                        Guide for creating effective Claude Code skills that extend capabilities with
+                        specialized knowledge, workflows, or tool integrations.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tag">Authoring</span>
+                        <span class="tag">Best Practices</span>
+                        <span class="tag">Documentation</span>
+                    </div>
+                    <a href="./skill-creator/skill.md" class="skill-link">View Skill →</a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-links">
+                <a href="https://github.com/Raudbjorn/claude" target="_blank">GitHub</a>
+                <a href="./marketplace.json">marketplace.json</a>
+                <a href="./README.md">Documentation</a>
+            </div>
+            <p>Built with ❤️ using Claude Code and MCP servers</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                &copy; 2025 Sveinbjorn Geirsson | MIT License
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
