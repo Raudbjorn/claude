@@ -1,0 +1,10 @@
+include:
+  - .claude-plugin
+  - supabase
+  - supabase-storage
+  - supabase-realtime
+  - svelte-expert
+  - skill-creator
+  - "*.md"
+  - "**/SKILL.md"
+  - "**/**.md"
