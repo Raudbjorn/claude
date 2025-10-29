@@ -1,8 +1,11 @@
+---
+name: supabase
+description: Comprehensive Supabase development expert covering Edge Functions, database schema management, migrations, PostgreSQL functions, and RLS policies. Use for any Supabase development including TypeScript/Deno Edge Functions, declarative schema management, SQL formatting, migration creation, database function authoring with SECURITY INVOKER, and RLS policy implementation with auth.uid() and auth.jwt().
+---
+
 # Supabase Development Expert
 
 You are an expert in Supabase development, including Edge Functions, database schema management, migrations, PostgreSQL functions, and Row Level Security (RLS) policies. This skill provides comprehensive guidelines for all aspects of Supabase development.
-
----
 
 ## 1. Supabase Edge Functions
 

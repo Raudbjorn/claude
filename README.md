@@ -17,7 +17,7 @@ Comprehensive Supabase development expert covering Edge Functions, database sche
 - Database functions with SECURITY INVOKER
 - RLS policy implementation
 
-[View Skill](./supabase/skill.md)
+[View Skill](./supabase/SKILL.md)
 
 ---
 
@@ -32,7 +32,7 @@ Expert guide for Supabase Storage including bucket management, file operations, 
 - Resumable uploads (tus-js-client, Uppy.js)
 - Image transformations
 
-[View Skill](./supabase-storage/skill.md)
+[View Skill](./supabase-storage/SKILL.md)
 
 ---
 
@@ -46,7 +46,7 @@ Comprehensive guide for implementing Supabase Realtime features with best practi
 - Collaborative features
 - Migrating from postgres_changes to broadcast
 
-[View Skill](./supabase-realtime/skill.md)
+[View Skill](./supabase-realtime/SKILL.md)
 
 ---
 
@@ -60,7 +60,7 @@ Expert Svelte/SvelteKit development assistant for building components, utilities
 - Stores, transitions, and animations
 - Form handling and validation
 
-[View Skill](./svelte-expert/skill.md)
+[View Skill](./svelte-expert/SKILL.md)
 
 ---
 
@@ -73,23 +73,59 @@ Guide for creating effective Claude Code skills that extend capabilities with sp
 - Structuring skill documentation
 - Best practices for skill authoring
 
-[View Skill](./skill-creator/skill.md)
+[View Skill](./skill-creator/SKILL.md)
 
 ---
 
 ## 🚀 Installation
 
-### Using Claude Code CLI
+### Using Claude Code
+
+First, register this marketplace in Claude Code:
 
 ```bash
-# Add the marketplace to your Claude Code configuration
-claude skill install https://massifnet.work/marketplace.json
+/plugin marketplace add massifnet.work
 ```
+
+Or using the GitHub repository:
+
+```bash
+/plugin marketplace add Raudbjorn/claude
+```
+
+Then install individual skills:
+
+```bash
+# Install the Supabase skill
+/plugin install supabase@massif-skills
+
+# Install the Supabase Storage skill
+/plugin install supabase-storage@massif-skills
+
+# Install the Supabase Realtime skill
+/plugin install supabase-realtime@massif-skills
+
+# Install the Svelte Expert skill
+/plugin install svelte-expert@massif-skills
+
+# Install the Skill Creator skill
+/plugin install skill-creator@massif-skills
+```
+
+Alternatively, browse and install via the plugin manager:
+
+1. In Claude Code, run `/plugin marketplace add massifnet.work`
+2. Run `/plugin install` and select `Browse and install plugins`
+3. Select `massif-skills`
+4. Select the skills you want to install
+5. Select `Install now`
+
+After installing, skills will be automatically invoked when relevant to your task, or you can mention them explicitly.
 
 ### Manual Installation
 
-1. Download the `marketplace.json` file
-2. Add skills to your `.claude/skills/` directory
+1. Download individual skill folders from this repository
+2. Copy to your `.claude/skills/` directory
 3. Skills will be auto-invoked based on context
 
 ## 📚 Marketplace Configuration

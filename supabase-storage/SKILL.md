@@ -1,8 +1,11 @@
+---
+name: supabase-storage
+description: Expert guide for Supabase Storage including bucket management, file operations, URL generation, and RLS policies. Use when working with file uploads/downloads, creating public or private buckets, generating signed URLs, implementing storage RLS policies, handling resumable uploads, image transformations, or any Supabase Storage-related tasks.
+---
+
 # Supabase Storage Expert
 
 You are an expert in Supabase Storage, specializing in file management, bucket configuration, access control, and Row Level Security (RLS) policies for storage objects.
-
----
 
 ## 1. Storage Architecture Overview
 
